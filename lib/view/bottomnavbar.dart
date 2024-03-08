@@ -10,21 +10,22 @@ class Bottomnavpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 1, 48, 87), 
       body: Provider.of<Bottomnavcontroller>(context)
           .mypages[Provider.of<Bottomnavcontroller>(context).selectedIndex],
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Container(
-          padding: EdgeInsets.all(5),
+          padding: EdgeInsets.all(4),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.black),
+              borderRadius: BorderRadius.circular(15), color: Color.fromARGB(255, 1, 102, 184)),
           child: BottomNavigationBar(
-            backgroundColor: Mycolors.secondarycolor,
-            selectedItemColor: Mycolors.bgcolor,
-            unselectedLabelStyle: TextStyle(color: Mycolors.textcolor),
+            elevation: 0,
+            backgroundColor: Color.fromARGB(255, 2, 106, 190),
+            selectedItemColor: Colors.lightBlueAccent,
+            unselectedLabelStyle: TextStyle(color: Colors.black), 
             showUnselectedLabels: true,
-            selectedLabelStyle: TextStyle(color: Mycolors.textcolor),
+            selectedLabelStyle: TextStyle(color: Colors.lightBlue),
             unselectedItemColor: Mycolors.textcolor,
             currentIndex:
                 Provider.of<Bottomnavcontroller>(context).selectedIndex,
@@ -32,11 +33,11 @@ class Bottomnavpage extends StatelessWidget {
                 .onItemTap,
             items: const [
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.house), label: 'home'),
+                  icon: Icon(FontAwesomeIcons.house,), label: ''),
+              // BottomNavigationBarItem(
+              //     icon: Icon(FontAwesomeIcons.magnifyingGlass), label: ''),
               BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.pagelines), label: 'category'),
-              BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.searchengin), label: 'search')
+                  icon: Icon(FontAwesomeIcons.bookmark), label: '' )
             ],
           ),
         ),

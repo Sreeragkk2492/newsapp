@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/view/categoryscreen.dart';
 import 'package:newsapp/view/homescreen.dart';
-import 'package:newsapp/view/searchscreen.dart';
+import 'package:newsapp/view/favorite.dart';
 
 class Bottomnavcontroller extends ChangeNotifier {
   int selectedIndex = 0;
@@ -11,5 +10,5 @@ class Bottomnavcontroller extends ChangeNotifier {
     notifyListeners();
   }
 
-  List<Widget> mypages = [HomeScreen(), Categoryscreen(), Searchscreen()];
+  List<Widget> mypages = [HomeScreen(),Searchscreen()];
 }

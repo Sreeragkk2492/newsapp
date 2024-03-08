@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newsapp/view/utils/colors.dart';
 import 'package:intl/intl.dart';
+import 'package:newsapp/view/widget/newsdetails.dart';
 
 class Newscard extends StatelessWidget {
   final String title;
@@ -24,7 +25,17 @@ class Newscard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => NewsDetails(
+                title: title,
+                imageUrl: imageUrl,
+                date: date,
+                description: description,
+                contant: contant,
+                sourceName: sourceName,
+                url: url)));
+      },
       child: Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
@@ -34,6 +45,7 @@ class Newscard extends StatelessWidget {
             Container(
               height: 200,
               decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                       image: NetworkImage(imageUrl), fit: BoxFit.cover)),
             ),
@@ -51,7 +63,12 @@ class Newscard extends StatelessWidget {
                   '${sourceName}|${DateFormat('dd/MM/yyyy').format(date!).toString() ?? ''}',
                   style: TextStyle(color: Mycolors.textcolor),
                 ),
-                IconButton(onPressed: () {}, icon: Icon(FontAwesomeIcons.share))
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      FontAwesomeIcons.share,
+                      color: Colors.white,
+                    ))
               ],
             )
           ],
