@@ -5,9 +5,13 @@ import 'package:provider/provider.dart';
 
 class Courousal extends StatelessWidget {
   const Courousal({super.key});
+  fetchdata(BuildContext context){
+   Provider.of<Homescreencontroller>(context,listen: false).fetchdata();
+  }
 
   @override
   Widget build(BuildContext context) {
+   //fetchdata(context);
     return Consumer<Homescreencontroller>(
       builder: (context, value, child) {
         return Padding(

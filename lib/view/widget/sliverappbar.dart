@@ -1,32 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SliverAppbar extends StatelessWidget {
-  const SliverAppbar({super.key});
+class Sliverappbar extends StatelessWidget {
+  const Sliverappbar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       backgroundColor: const Color.fromARGB(255, 1, 48, 87),
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Good Morning',
-            style: TextStyle(
-                wordSpacing: 1,
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold),
-          ),
-          Text(
-            'Explore the world by one tap',
-            style: TextStyle(color: Colors.white, fontSize: 15),
-          ),
-          SizedBox(height: 10,)
-        ],
+      title:const Padding(
+        padding: const EdgeInsets.only(top: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Good Morning',
+              style: TextStyle(
+                  wordSpacing: 1,
+                  color: Colors.white,
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Explore the world by one tap',
+              style: TextStyle(color: Colors.white, fontSize: 15),
+            ),
+            SizedBox(height: 10,)
+          ],
+        ),
       ),
-     // expandedHeight: 100,
+       // expandedHeight: 100,
       // bottom: PreferredSize(preferredSize: Size(100, 100), child: Container(
       //   child: Padding(
       //     padding: const EdgeInsets.all(20.0),

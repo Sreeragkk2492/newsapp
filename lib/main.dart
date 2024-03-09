@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/controller/bottomnavvontroller.dart';
 import 'package:newsapp/controller/categorycontroller.dart';
 import 'package:newsapp/controller/homescreencontroller.dart';
+import 'package:newsapp/controller/searchcontroller.dart';
 import 'package:newsapp/controller/splashprovider.dart';
 import 'package:newsapp/view/bottomnavbar.dart';
 
@@ -25,6 +26,8 @@ class Myapp extends StatelessWidget {
       create: (context) => Homescreencontroller(),),
        ChangeNotifierProvider(
       create: (context) => Categorycontroller(),), 
+       ChangeNotifierProvider(
+      create: (context) => SearchControllerScreen(),),  
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

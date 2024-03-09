@@ -6,9 +6,6 @@ class Searchscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      backgroundColor: Color.fromARGB(255, 1, 48, 87), 
-      
-    );
+    return Scaffold();
   }
 }

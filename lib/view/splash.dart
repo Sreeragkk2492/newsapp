@@ -12,7 +12,7 @@ class Splashnews extends StatelessWidget {
       Provider.of<SplashProvider>(context, listen: false).completeSplash();
     });
     return Scaffold(
-      backgroundColor: Mycolors.secondarycolor,
+      backgroundColor: Color.fromARGB(255, 1, 48, 87),
       body: Center(
           child: Text(
         'WaveNews',
